@@ -73,7 +73,7 @@ See the [original README](README.md) for complete documentation.
 ### Install from source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/remote-opencode-voice.git
+git clone https://github.com/Braga1913/remote-opencode-voice.git
 cd remote-opencode-voice
 npm install
 npm run build
