@@ -1,0 +1,78 @@
+{
+  "name": "remote-opencode-voice",
+  "version": "1.6.0",
+  "description": "Enhanced Discord bot for remote OpenCode CLI access with voice channel support, speech-to-text, and text-to-speech",
+  "main": "dist/src/index.js",
+  "bin": {
+    "remote-opencode-voice": "./dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node --no-deprecation dist/src/cli.js start",
+    "dev": "node --loader ts-node/esm src/cli.ts",
+    "deploy-commands": "npm run build && node dist/src/cli.js deploy",
+    "test": "vitest",
+    "prepublishOnly": "npm run build",
+    "release": "npm version patch && npm run build && npm publish",
+    "release:minor": "npm version minor && npm run build && npm publish",
+    "release:major": "npm version major && npm run build && npm publish"
+  },
+  "keywords": [
+    "discord",
+    "opencode",
+    "cli",
+    "remote",
+    "bot",
+    "voice",
+    "speech-to-text",
+    "text-to-speech",
+    "stt",
+    "tts"
+  ],
+  "author": "Parth",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.2",
+    "@types/eventsource": "^1.1.15",
+    "commander": "^13.1.0",
+    "discord.js": "^14.25.1",
+    "eventsource": "^4.1.0",
+    "libsodium-wrappers": "^0.8.4",
+    "node-edge-tts": "^1.2.10",
+    "node-pty": "^1.1.0",
+    "open": "^10.1.0",
+    "opencode-antigravity-auth": "^1.4.6",
+    "picocolors": "^1.1.1",
+    "undici": "^6.23.0",
+    "update-notifier": "^7.3.1",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "@types/update-notifier": "^6.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "overrides": {
+    "undici": "^6.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/remote-opencode-voice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/remote-opencode-voice/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/remote-opencode-voice#readme"
+}
